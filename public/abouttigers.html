@@ -1,0 +1,253 @@
+<html>
+<body>
+
+<title>Tiger.com</title>
+<style>
+    img {height: 10%;
+    width: auto;
+    position: absolute;
+  left: 0px;
+    }
+
+ ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+font-weight:bold;
+font-size: large;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  font-weight:bold;
+  font-size: large;
+}
+
+li a:hover {
+  background-color: gray;
+}
+
+div.image {
+    float: left;
+}
+nav {
+    float: left;
+    padding-left: 600;
+    padding-top: 20px;
+}
+h2 {text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 250;
+    }
+
+p {text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10;
+    }
+
+    body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("Images/indochinese.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.inp {
+    padding-top: 38px;
+    padding-left: 1200px;
+}
+
+.btn {
+  margin-left: 1200px;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("Images/tiger.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.btn {
+	background-color:#ff7b00;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:10px;
+	padding:7px 24px;
+	text-decoration:none;
+}
+.btn:hover {
+	background-color:#ff7b00;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+<a href="/">
+  <img src='Images/logo.jpg'>
+</a>
+<nav class="bar" style="text-align: center;">
+    <ul>
+      <li><a href="index.html" class="Home">Home</a></li>
+      <li> <a href="/about_tigers" class="About">About Tigers</a></li>
+      <li> <a href="/review" class="About">Give Review</a></li>
+
+   
+  </nav>
+<div class="inp">
+  <form id='myform'>
+    <input type="text"  name="name" placeholder="Search...">
+    </form>
+</div>
+<div class="btn">Search</div>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+        $('.btn').click(function(){
+            var name =$('input[name="name"]').val();
+             $.post('/',$('#myform').serialize()).done(
+               function(data){
+                 console.log(data);
+                 if(data.redirect) {
+                  window.location.href=data.url;
+                 }
+                })
+        })
+    })
+</script>
+<br>
+
+<div class="bgimg-1">
+    <div class="caption">
+    <span class="border">Where do tigers live?</span>
+    </div>
+  </div>
+  
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  
+    <p>Tigers are native to Asia, but their range today is much smaller than it used to be, and includes South-east Asia, India, western China, and some parts of Russia, with breeding populations present in Bhutan, Bangladesh, India, Malaysia, Indonesia, Thailand, Russia and Nepal.
+
+        In terms of habitat, tigers inhabit a range of environments, but generally prefer areas with dense cover, like forests, with access to water and plenty of prey. Dens are positioned in secluded areas such as in caves, among dense vegetation or in hollow trees.</p>
+  </div>
+
+  <div class="bgimg-1">
+    <div class="caption">
+    <span class="border">What do tigers eat?</span>
+    </div>
+  </div>
+  
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  
+    <p>Tigers are powerful apex predators that are at the top of the food chain and capable of killing animals over twice their size.  They are nocturnal hunters and will travel many miles to prey on a variety of animals including deer, buffalo and wild boar; native ungulates are the favourite. Not wanting to waste food, remains of large kills may be dragged to a thicket and loosely buried with leaves, ready to be returned to later.</p>
+  </div>
+
+  <div class="bgimg-1">
+    <div class="caption">
+    <span class="border">Are tigers solitary?</span>
+    </div>
+  </div>
+  
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  
+    <p>Tigers are solitary, living alone in scent-marked territories that vary in size depending on the availability of prey. If there is plenty of prey available, the area can support more tigers, so territories will be smaller and tiger numbers higher.</p>
+  </div>
+
+  <div class="bgimg-1">
+    <div class="caption">
+    <span class="border">Do tigers mate for life?</span>
+    </div>
+  </div>
+  
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  
+    <p>Female tigers reach sexual maturity at around 3–4 years of age, whilst males mature later at around 4–5. There is no particular breeding season, with female tigers entering oestrus, and therefore able to conceive, every 3–9 weeks. However, tigers usually breed in the cooler months from November to April. Females attract males and let them know they are ready to reproduce by vocalising and marking their territory with distinct smelling urine.
+
+        Litters of two to six cubs are born around 16 weeks after copulation. Male tigers have nothing to do with the female or the young. Cubs remain with their mothers for two to three years, after which they disperse to find their own territory. Hunting lessons begin when cubs are around six months old, with them becoming competent hunters at around 11 months and fully independent at around 18 months.</p>
+  </div>
+  
+
+</body>
+</html>

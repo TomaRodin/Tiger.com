@@ -1,0 +1,212 @@
+<html>
+<body>
+
+<title>Tiger.com</title>
+<style>
+    img {height: 10%;
+    width: auto;
+    position: absolute;
+  left: 0px;
+    }
+
+ ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+font-weight:bold;
+font-size: large;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  font-weight:bold;
+  font-size: large;
+}
+
+li a:hover {
+  background-color: gray;
+}
+
+div.image {
+    float: left;
+}
+nav {
+    float: left;
+    padding-left: 600;
+    padding-top: 20px;
+}
+h2 {text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 250;
+    }
+
+p {text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 10;
+    }
+
+    body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("Images/cheetah.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+.inp {
+    padding-top: 38px;
+    padding-left: 1200px;
+}
+
+.btn {
+  margin-left: 1200px;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("/Images/bengal.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.btn {
+	background-color:#ff7b00;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:10px;
+	padding:7px 24px;
+	text-decoration:none;
+}
+.btn:hover {
+	background-color:#ff7b00;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
+
+<a href="/">
+  <img src='Images/logo.jpg'>
+</a>
+<nav class="bar" style="text-align: center;">
+    <ul>
+      <li><a href="index.html" class="Home">Home</a></li>
+      <li> <a href="/about_tigers" class="About">About Tigers</a></li>
+      <li> <a href="/review" class="About">Give Review</a></li>
+
+   
+  </nav>
+<div class="inp">
+  <form id='myform'>
+    <input type="text"  name="name" placeholder="Search...">
+    </form>
+</div>
+<div class="btn">Search</div>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+        $('.btn').click(function(){
+            var name =$('input[name="name"]').val();
+             $.post('/',$('#myform').serialize()).done(
+               function(data){
+                 console.log(data);
+                 if(data.redirect) {
+                  window.location.href=data.url;
+                 }
+                })
+        })
+    })
+</script>
+<br>
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">Bengal Tiger</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+
+  <p>The tiger has nine subspecies. Three of these are already extinct. The historical range of tigers all across Asia is now significantly smaller. The surviving subspecies of the Pathera tigris trigris, which is popularly known by its common name, Bengal tiger can be found in Bangladesh, Bhutan, India and Nepal. It is still the subspecies with the most living individuals left, even with its mere 2,500 adult tiger population. Bengal tigers can be found in alluvial grasslands, rainforests of both the tropical and subtropical kinds, mangroves, deciduous forests and scrub forests. Male Bengal tigers can reach up to 270 to 310 centimeters (110 to 120 inches) while the females reach up to 240 to 265 centimeters (94 to 104 inches). The males are also heavier, at 175 to 260 kilograms (390 to 570 pounds), while the females weigh around 100 to 181 kilograms (220 to 400 pounds). Places also have an effect on the weight and length of the Bengal tiger, with those living in Nepal and India growing to become the largest bunch.</p>
+</div>
+
+</body>
+</html>
